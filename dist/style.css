@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+body {
+  background-color: #020;
+  color: #ddd;
+  font-family: "Share Tech Mono", monospace;
+}
+
+#scanlines {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #000 50%, #fff 51%);
+  background-size: 100% 3px;
+  opacity: 0.1;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+#number, #count {
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+#number {
+  text-align: center;
+  font-size: 52px;
+  margin-top: 40vh;
+  letter-spacing: -19px;
+  text-shadow: #ff0 0 0 5px, #7f0 0 0 15px, #0f0 0 0 25px;
+  margin-bottom: 8px;
+}
+
+#count {
+  text-align: center;
+  font-size: 32px;
+  color: #9f9;
+  text-shadow: #0f0 0 0 15px;
+}
+
+.speed {
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 200ms;
+  color: #393;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.speed:hover {
+  opacity: 0.8;
+}
+.speed input[type=range] {
+  vertical-align: 20%;
+  -webkit-appearance: none;
+  width: 200px;
+}
+.speed input[type=range]:focus {
+  outline: none;
+}
+.speed input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #020;
+  border: 0;
+  border-top: 2px dotted #393;
+}
+.speed input[type=range]::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  padding: 8px;
+  border-radius: 100px;
+  border: 2px solid #393;
+  background: #020;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
